@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgeCraft Suite | Open-Source Spatial Design</title>
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <style>
+        :root {
+            --bg: #0b0b0f;
+            --surface: #13131a;
+            --accent: #ff4757;
+            --text: #f5f5f7;
+            --text-muted: #8e8e93;
+            --border: #22222a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(45deg, #ff4757, #ff6b81);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .hero {
+            max-width: 800px;
+            margin: 100px auto 60px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .badge {
+            background: var(--border);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent);
+            display: inline-block;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 71, 87, 0.3);
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .cta-btn {
+            background: var(--accent);
+            color: var(--text);
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 71, 87, 0.4);
+        }
+
+        .suite-grid {
+            max-width: 1200px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            cursor: pointer;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .card-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+            font-size: 12px;
+            border-top: 1px solid var(--border);
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ForgeCraft.</div>
+        <nav class="nav-links">
+            <a href="#suite">The Suite</a>
+            <a href="https://github.com">GitHub</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="badge">Open Source Autodesk Alternative</div>
+        <h1>Spatial design software, completely liberated.</h1>
+        <p>A full engineering, 3D modeling, and CAD suite built on absolute freedom, web technologies, and AI agent execution.</p>
+        
+        <!-- Main Suite Pre-Order Console -->
+        <div style="background: var(--surface); border: 1px solid var(--border); padding: 30px; border-radius: 12px; max-width: 500px; margin: 40px auto; text-align: left;">
+            <h4 style="margin-bottom: 8px; font-size: 18px;">Pre-Order the Full Suite Ecosystem</h4>
+            <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 20px;">Get early build flags, binary access, and priority notifications straight to your inbox.</p>
+            <form onsubmit="handlePreOrder(event)" style="display: flex; gap: 10px;">
+                <input type="email" placeholder="Enter your email address" required style="flex: 1; background: #07070a; border: 1px solid var(--border); padding: 12px; border-radius: 6px; color: white; font-family: inherit; outline: none;">
+                <button type="submit" class="cta-btn" style="padding: 12px 20px; font-size: 14px; border: none; cursor: pointer;">Pre-Order</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Release Matrix Grid Area -->
+    <section id="suite" class="suite-grid">
+        <!-- Card 1: ForgeCraft 3D -->
+        <div class="card" onclick="openDetails('tinker')">
+            <span class="card-tag">Alternative to Tinkercad</span>
+            <h3>ForgeCraft 3D</h3>
+            <p>Constructive Solid Geometry (CSG) engine running entirely in your browser window space.</p>
+            
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border);">
+                <div style="font-size: 11px; color: var(--accent); font-weight: bold; text-transform: uppercase; margin-bottom: 6px;">Web Deployment Launch:</div>
+                <div id="tinker-web-timer" style="font-family: monospace; font-size: 16px; color: var(--text);">Calculating...</div>
+                
+                <div style="font-size: 11px; color: var(--text-muted); font-weight: bold; text-transform: uppercase; margin: 12px 0 6px 0;">Desktop App Launch:</div>
+                <div id="tinker-app-timer" style="font-family: monospace; font-size: 16px; color: var(--text-muted);">Calculating...</div>
+            </div>
+            <span class="card-tag" style="margin-top: 20px; color: #ffa502;">Click for details & notify &rarr;</span>
+        </div>
+
+        <!-- Card 2: ForgeCraft Fusion -->
+        <div class="card" onclick="openDetails('fusion')">
+            <span class="card-tag">Alternative to Fusion 360</span>
+            <h3>ForgeCraft Fusion</h3>
+            <p>Parametric multi-layer solid engines, object constraint systems, and mechanical physics engines.</p>
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border); font-family: monospace; color: var(--text-muted);">
+                STATUS: COMING SOON
+            </div>
+            <span class="card-tag" style="margin-top: 48px; color: #ffa502;">Click for details & notify &rarr;</span>
+        </div>
+
+        <!-- Card 3: ForgeCraft Render -->
+        <div class="card" onclick="openDetails('render')">
+            <span class="card-tag">Alternative to Maya / VRED</span>
+            <h3>ForgeCraft Render</h3>
+            <p>High-quality 3D scene arrangement, studio lighting grids, structural materials, and ray-tracing viewport tools.</p>
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border); font-family: monospace; color: var(--text-muted);">
+                STATUS: COMING SOON
+            </div>
+            <span class="card-tag" style="margin-top: 48px; color: #ffa502;">Click for details & notify &rarr;</span>
+        </div>
+    </section>
+
+    <!-- Global App Specification Overlay / Modal Window Container -->
+    <div id="app-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 999; align-items: center; justify-content: center;">
+        <div style="background: var(--surface); border: 1px solid var(--border); padding: 40px; border-radius: 16px; max-width: 550px; width: 90%; position: relative; text-align: left;">
+            <button onclick="closeDetails()" style="position: absolute; top: 20px; right: 20px; background: transparent; border: none; color: var(--text-muted); font-size: 24px; cursor: pointer;">&times;</button>
+            
+            <span id="modal-tag" class="card-tag">Application Layer</span>
+            <h3 id="modal-title" style="font-size: 28px; margin-bottom: 15px;">App Title</h3>
+            <p id="modal-desc" style="color: var(--text-muted); margin-bottom: 30px; font-size: 15px;">Detailed description placeholder text.</p>
+            
+            <div style="border-top: 1px solid var(--border); padding-top: 20px;">
+                <h5 style="margin-bottom: 10px; font-size: 14px; color: var(--text);">Get Release Notifications For This App</h5>
+                <form onsubmit="handleNotify(event)" style="display: flex; gap: 10px;">
+                    <button type="submit" class="cta-btn" style="padding: 12px 20px; font-size: 14px; border: none; cursor: pointer;">Notify Me</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        &copy; 2026 ForgeCraft Labs. Built for Hack Club Terra.
+    </footer>
+
+    <script>
+        // Core App Meta Engine Registry Datastore
+        const appRegistry = {
+            tinker: {
+                title: "ForgeCraft 3D",
+                tag: "Alternative to Tinkercad",
+                desc: "A pure browser-based and desktop-native Constructive Solid Geometry solver. Allows seamless 3D primitive block drag-drop scaling operations, custom material assignments, and fast spatial coordinate rendering without bulky structural compilation requirements."
+            },
+            fusion: {
+                title: "ForgeCraft Fusion",
+                tag: "Alternative to Fusion 360",
+                desc: "Advanced industrial design parametric spatial core. Leverages strict constraint solving geometry node trees, architectural design mapping layers, and localized physical deformation testing profiles directly on client device threads."
+            },
+            render: {
+                title: "ForgeCraft Render",
+                tag: "Alternative to Maya / VRED",
+                desc: "Next generation digital twin visualization grid. Contains robust material assignment algorithms, real-time lighting framework pipelines, and path-traced ray calculation configurations built for high fidelity display viewports."
+            }
+        };
+
+        function openDetails(appKey) {
+            const app = appRegistry[appKey];
+            document.getElementById('modal-title').innerText = app.title;
+            document.getElementById('modal-tag').innerText = app.tag;
+            document.getElementById('modal-desc').innerText = app.desc;
+            document.getElementById('app-modal').style.display = 'flex';
+        }
+
+        function closeDetails() {
+            document.getElementById('app-modal').style.display = 'none';
+        }
+
+        function handlePreOrder(e) {
+            e.preventDefault();
+            alert("Success! Your pre-order configuration for the ForgeCraft Suite has been tracked.");
+            e.target.reset();
+        }
+
+        function handleNotify(e) {
+            e.preventDefault();
+            alert("Success! You will receive priority notifications when this build branch releases.");
+            e.target.reset();
+            closeDetails();
+        }
+
+        // Countdown Ticker Engineering Computations
+        function initCountdownEngine() {
+            const now = new Date().getTime();
+            
+            // Fixed milestone target offsets: 3 weeks (21 days) and 4 weeks (28 days)
+            const webTargetTime = now + (3 * 7 * 24 * 60 * 60 * 1000);
+            const appTargetTime = now + (4 * 7 * 24 * 60 * 60 * 1000);
+
+            function updateTickers() {
+                const current = new Date().getTime();
+                
+                // Web Timer Ticker math
+                const webDiff = webTargetTime - current;
+                if (webDiff > 0) {
+                    const wDays = Math.floor(webDiff / (1000 * 60 * 60 * 24));
+                    const wHours = Math.floor((webDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const wMins = Math.floor((webDiff % (1000 * 60 * 60)) / (1000 * 60));
+                    const wSecs = Math.floor((webDiff % (1000 * 60)) / 1000);
+                    document.getElementById('tinker-web-timer').innerText = `${wDays}d ${wHours}h ${wMins}m ${wSecs}s`;
+                }
+
+                // App Timer Ticker math
+                const appDiff = appTargetTime - current;
+                if (appDiff > 0) {
+                    const aDays = Math.floor(appDiff / (1000 * 60 * 60 * 24));
+                    const aHours = Math.floor((appDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const aMins = Math.floor((appDiff % (1000 * 60 * 60)) / (1000 * 60));
+                    const aSecs = Math.floor((appDiff % (1000 * 60)) / 1000);
+                    document.getElementById('tinker-app-timer').innerText = `${aDays}d ${aHours}h ${aMins}m ${aSecs}s`;
+                }
+            }
+
+            setInterval(updateTickers, 1000);
+            updateTickers();
+        }
+
+        window.addEventListener('load', initCountdownEngine);
+    </script>
+</body>
+</html>
